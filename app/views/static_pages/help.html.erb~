@@ -1,15 +1,7 @@
 <% provide(:title, 'Help') %>
-<!DOCTYPE html>
-<html>
-<head>
-<title> Ruby on rails | <%= yield(:title) %></title>
-</head>
 
-<body>
+
 <h1>StaticPages#help</h1>
 <p>Find me in app/views/static_pages/help.html.erb</p>
 
 
-</body>
-
-</html>
