@@ -1,7 +1,8 @@
+<% provide(:title, 'Help') %>
 <!DOCTYPE html>
 <html>
 <head>
-<title> Ruby on rails |Help</title>
+<title> Ruby on rails | <%= yield(:title) %></title>
 </head>
 
 <body>
