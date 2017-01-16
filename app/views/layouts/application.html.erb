@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-<title>Ruby on rails | <%= yield(:title) %></title>
+<title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->  
+
+</head>
 
   <body>
-    <%= yield %>
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+     <div class="container">
+       <%= link to "sample app", '#', id: "logo" %>
+     <nav>
+      <ul class="nav pull-right">
+         <li><%= link to "Home", '#' %></li>
+         <li><%= link to "Help",'#' %></li>
+         <li><%= link to "Sign In",'#' %></li>
+     </ul>
+     </nav>
+     </div>
+   </div>
+</header>
+    <div class="container">
+       <%= yield %>
+    </div>
   </body>
 </html>
