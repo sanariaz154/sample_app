@@ -53,7 +53,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 group :test do
-gem 'capybara', '1.1.2'
+gem 'capybara', '2.2.0'
 end
 group :production do
 gem 'pg', '0.12.2'

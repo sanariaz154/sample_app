@@ -6,6 +6,14 @@ RSpec.describe "Static Pages", type: :request do
       visit '/static_pages/home'
       page.should have_content('Sample App')
     end
+   
+    it "should have the base title" do
+     visit '/static_pages/home'
+       page.should have_selector('title',
+         :text => "Ruby on Rails")
+end
+
+
   end
 
 
@@ -31,16 +39,5 @@ visit '/static_pages/contact'
 page.should have_content('contact')
 end
 end
-
-
-
-
-
-
-
-
-
-
-
 
 end
